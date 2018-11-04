@@ -1,0 +1,24 @@
+{
+  "name": "algo_practice",
+  "version": "1.0.0",
+  "description": "working along with Grokking Alogrithms",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test:mocha",
+    "test:mocha": "mocha",
+    "start": "npm run test:mocha -- -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rbtprograms/algo_practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rbtprograms/algo_practice/issues"
+  },
+  "homepage": "https://github.com/rbtprograms/algo_practice#readme",
+  "dependencies": {
+    "mocha": "^5.2.0"
+  }
+}
