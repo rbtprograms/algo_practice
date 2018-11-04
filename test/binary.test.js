@@ -1,5 +1,5 @@
 const assert = require('assert');
-const { binary_search } = require('../lib/binary.js');
+const binary_search = require('../lib/binary.js');
 
 describe('binary search algorithm', () => {
 
