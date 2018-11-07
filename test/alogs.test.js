@@ -2,6 +2,15 @@ const assert = require('assert');
 const binarySearch = require('../lib/binary.js');
 const selectionSort = require('../lib/selection.js');
 const factorial = require('../lib/recursion.js');
+const quickSort = require('../lib/quickSort.js');
+
+describe('quickSort', () => {
+
+  it('should sort an array', () => {
+    const test = [5, 3, 6, 2, 10]
+    assert.deepEqual(quickSort(test), [2, 3, 5, 6, 10]);
+  });
+});
 
 describe('binary search algorithm', () => {
 
