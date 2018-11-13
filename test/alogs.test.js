@@ -3,9 +3,26 @@ const binarySearch = require('../lib/binary.js');
 const selectionSort = require('../lib/selection.js');
 const factorial = require('../lib/recursion.js');
 const quickSort = require('../lib/quickSort.js');
+const breadthFirstSearch = require('../lib/breadth-first-search.js');
+
+describe('breadth first search', () => {
+  let graph = {};
+  graph['you'] = ['Easton', 'Arthur', 'Injoong'];
+  graph['Easton'] = ['Kevin', 'Sarah'];
+  graph['Arthur'] = ['Marty', 'Robyn'];
+  graph['Injoong'] = ['Mariah', 'Antreo'];
+  graph['Kevin'] = [];
+  graph['Sarah'] = [];
+  graph['Marty'] = [];
+  graph['Robyn'] = [];
+  graph['Mariah'] = [];
+  graph['Antreo'] = [];
+  it('should find someone', () => {
+    assert.equal(breadthFirstSearch('you'), true);
+  });
+});
 
 describe('quickSort', () => {
-
   it('should sort an array', () => {
     let test = [5, 3, 6, 2, 10];
     assert.deepEqual(quickSort(test), [2, 3, 5, 6, 10]);
