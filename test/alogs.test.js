@@ -7,8 +7,10 @@ const quickSort = require('../lib/quickSort.js');
 describe('quickSort', () => {
 
   it('should sort an array', () => {
-    const test = [5, 3, 6, 2, 10]
+    let test = [5, 3, 6, 2, 10];
     assert.deepEqual(quickSort(test), [2, 3, 5, 6, 10]);
+    test = [3, 3, 3, 8, 1,];
+    assert.deepEqual(quickSort(test), [1, 3, 3, 3, 8]);
   });
 });
 
