@@ -6,19 +6,9 @@ const quickSort = require('../lib/quickSort.js');
 const breadthFirstSearch = require('../lib/breadth-first-search.js');
 
 describe('breadth first search', () => {
-  let graph = {};
-  graph['you'] = ['Easton', 'Arthur', 'Injoong'];
-  graph['Easton'] = ['Kevin', 'Sarah'];
-  graph['Arthur'] = ['Marty', 'Robyn'];
-  graph['Injoong'] = ['Mariah', 'Antreo'];
-  graph['Kevin'] = [];
-  graph['Sarah'] = [];
-  graph['Marty'] = [];
-  graph['Robyn'] = [];
-  graph['Mariah'] = [];
-  graph['Antreo'] = [];
   it('should find someone', () => {
-    assert.equal(breadthFirstSearch('you'), true);
+    assert.equal(breadthFirstSearch('you').found, true);
+    assert.equal(breadthFirstSearch('you').name, 'Sarah');
   });
 });
 
