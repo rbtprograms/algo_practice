@@ -4,6 +4,21 @@ const selectionSort = require('../lib/selection.js');
 const factorial = require('../lib/recursion.js');
 const quickSort = require('../lib/quickSort.js');
 const breadthFirstSearch = require('../lib/breadth-first-search.js');
+const dijkstra = require('../lib/dijkstra');
+
+describe('dijsktra', () => {
+  it('should find the shortest path on a weighted graph with no negatives or cycles', () => {
+    const problem = {
+      start: {A: 5, B: 2},
+      A: {C: 4, D: 2},
+      B: {A: 8, D: 7},
+      C: {D: 6, finish: 3},
+      D: {finish: 1},
+      finish: {}
+    };
+    assert.equal(dijkstra(problem).distance, 8);
+  });
+});
 
 describe('breadth first search', () => {
   it('should find someone', () => {

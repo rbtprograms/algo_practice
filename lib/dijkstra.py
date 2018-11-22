@@ -35,14 +35,17 @@ def findLowestCostNode(costs):
       lowestCostNode = node
   return lowestCostNode
   
-node = findLowestCostNode(costs)
-while node is not None:
-  cost = costs[node]
-  neighbors = graph[node]
-  for n in neighbors.keys():
-    newCost = cost + neighbors[n]
-    if costs[n] > newCost:
-      costs[n] = newCost
-      parents[n] = node
-  processed.append(node)
+def dijkstra(costs):
   node = findLowestCostNode(costs)
+  while node is not None:
+    cost = costs[node]
+    neighbors = graph[node]
+    for n in neighbors.keys():
+      newCost = cost + neighbors[n]
+      if costs[n] > newCost:
+        costs[n] = newCost
+        parents[n] = node
+    processed.append(node)
+    node = findLowestCostNode(costs)
+
+print(dijkstra(costs))
